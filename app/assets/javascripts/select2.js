@@ -2878,7 +2878,7 @@ the specific language governing permissions and limitations under the Apache Lic
         // multi
         opening: function () {
             this.clearPlaceholder(); // should be done before super so placeholder is not used to search
-            this.resizeSearch();
+            // this.resizeSearch();
 
             this.parent.opening.apply(this, arguments);
 
@@ -2973,7 +2973,7 @@ the specific language governing permissions and limitations under the Apache Lic
             } else {
                 if (this.countSelectableResults()>0) {
                     this.search.width(10);
-                    this.resizeSearch();
+                    // this.resizeSearch();
                     if (this.getMaximumSelectionSize() > 0 && this.val().length >= this.getMaximumSelectionSize()) {
                         // if we reached max selection size repaint the results so choices
                         // are replaced with the max selection reached message
@@ -3294,7 +3294,7 @@ the specific language governing permissions and limitations under the Apache Lic
             // make sure the search container is the last item in the list
             this.searchContainer.appendTo(this.searchContainer.parent());
             // since we collapsed the width in dragStarted, we resize it here
-            this.resizeSearch();
+            // this.resizeSearch();
 
             // update selection
             this.selection.find(".select2-search-choice").each(function() {
